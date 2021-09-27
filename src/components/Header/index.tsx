@@ -11,4 +11,4 @@ export function Header() {
       </ul>
     </Container>
   );
-};
+}
