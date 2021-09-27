@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-import { NavLinkContainer } from "./styles";
+import { NavLinkContainer } from './styles';
 
 interface Props {
   title: string;
@@ -16,7 +16,7 @@ export function NavLink({ title, path }: Props) {
     <NavLinkContainer isActive={isActive}>
       <Link href={path}>
         <a>{title}</a>
-      </Link> 
+      </Link>
     </NavLinkContainer>
-  )
+  );
 }
