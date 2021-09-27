@@ -12,6 +12,7 @@ export function HomeHero() {
           <h1>Olá</h1>
           <h2>Me chamo Mike</h2>
         </TextContainer>
+
         <InfosContainer>
           <CodeInfo>
             <span className="comment">//Minha apresentação</span>
