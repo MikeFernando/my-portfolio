@@ -12,6 +12,7 @@ export const Container = styled.section`
     padding-bottom: 8rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
+    // ============================== RESPONSIVE
     @media (max-width: 1000px) {
       gap: 1rem;
     }
@@ -56,6 +57,7 @@ export const ItemContainer = styled.div`
     }
   }
 
+  // ============================== PSEUDO ELEMENTS
   &:hover > div {
     filter: brightness(1.4);
     transform: translateY(-20px);
@@ -65,6 +67,7 @@ export const ItemContainer = styled.div`
     margin-top: 4rem;
   }
 
+  // ============================== RESPONSIVE
   @media (max-width: 1000px) {
     > div {
       height: 15rem;

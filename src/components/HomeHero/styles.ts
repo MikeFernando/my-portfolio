@@ -55,6 +55,7 @@ export const TextContainer = styled.section`
     color: ${({ theme }) => theme.secondary};
   }
 
+  // ============================== RESPONSIVE
   @media (max-width: 1450px) {
     h1 {
       font-size: 5rem;
@@ -94,26 +95,9 @@ export const CodeInfo = styled.pre`
 
   transition: 1s;
 
-  @media (max-width: 1450px) {
-    width: 18rem;
-    padding: 1.5rem;
-    font-size: 0.8rem;
-  }
-  @media (max-width: 1000px) {
-    width: 100%;
-  }
-
   > div {
     margin: 0.2rem 0;
     margin-left: 1rem;
-  }
-
-  &:last-child {
-    align-self: flex-end;
-  }
-
-  &:hover {
-    filter: brightness(1.3);
   }
 
   span.comment {
@@ -128,5 +112,25 @@ export const CodeInfo = styled.pre`
 
   span.blue {
     color: #7ac7e3;
+  }
+
+  // ============================== PESEUDO ELEMENTS
+  &:last-child {
+    align-self: flex-end;
+  }
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+
+  // ============================== RESPONSIVE
+  @media (max-width: 1450px) {
+    width: 18rem;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
   }
 `;
