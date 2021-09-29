@@ -1,3 +1,4 @@
+import { Conhecimentos } from '../components/Conhecimentos';
 import { Experiences } from '../components/Experiences';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
@@ -14,6 +15,7 @@ export default function Home() {
         <HomeHero />
         <Experiences />
         <Projects />
+        <Conhecimentos />
       </main>
     </HomeContainer>
   );
