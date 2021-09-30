@@ -11,6 +11,10 @@ export const Container = styled.section`
     gap: 8rem;
 
     // ============================== RESPONSIVE
+    @media (max-width: 1320px) {
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
     @media (max-width: 1000px) {
       gap: 5rem;
     }

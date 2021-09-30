@@ -25,10 +25,12 @@ export const Container = styled.section`
 
 export const ItemContainer = styled.div`
   > div {
+    max-width: 30rem;
     background: ${({ theme }) => theme.gradient};
     padding: 1rem;
     padding-top: 2.5rem;
     height: 20rem;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -54,6 +56,27 @@ export const ItemContainer = styled.div`
       color: ${({ theme }) => theme.textLight};
       font-size: 1rem;
       font-weight: 300;
+    }
+
+    > button {
+      background: none;
+      border: none;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+
+      transition: 0.5s;
+
+      a {
+        font-size: 1rem;
+        font-weight: 300;
+        transition: 0.5s;
+        color: ${({ theme }) => theme.secondary};
+
+        &:hover {
+          color: ${({ theme }) => theme.primary};
+        }
+      }
     }
   }
 
@@ -113,5 +136,11 @@ export const ItemContainer = styled.div`
         font-size: 1rem;
       }
     }
+  }
+`;
+
+export const ModalContainer = styled.div`
+  h1 {
+    color: ${({ theme }) => theme.gradient};
   }
 `;

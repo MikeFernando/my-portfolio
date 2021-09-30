@@ -28,7 +28,7 @@ export const Container = styled.section`
     transition: 0.5s;
 
     &:hover {
-      background: ${({ theme }) => darken(0.2, theme.primary)};
+      background: ${({ theme }) => darken(0.1, theme.primary)};
     }
 
     a {
@@ -116,6 +116,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       transition: 0.5;
     }
   }
+
   // ============================== PSEUDO ELEMENTS
   &:hover {
     > section {
