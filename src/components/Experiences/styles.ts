@@ -82,7 +82,7 @@ export const ItemContainer = styled.div`
 
   // ============================== PSEUDO ELEMENTS
   &:hover > div {
-    filter: brightness(1.4);
+    filter: brightness(2);
     transform: translateY(-20px);
   }
 

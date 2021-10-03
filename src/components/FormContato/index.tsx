@@ -7,13 +7,7 @@ export function FormContato() {
   return (
     <Container>
       <SectionTitle
-        title={
-          <>
-            Precisa dos
-            <br />
-            meus serviços?
-          </>
-        }
+        title="Entrar em contato"
         description={
           <>
             Preencha o formulário abaixo que
@@ -22,7 +16,6 @@ export function FormContato() {
           </>
         }
       />
-
       <Form />
     </Container>
   );

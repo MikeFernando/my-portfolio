@@ -2,7 +2,7 @@ import { SiJavascript, SiTypescript } from 'react-icons/si';
 import { IoLogoVercel } from 'react-icons/io5';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt } from 'react-icons/fa';
-import { GrReactjs } from 'react-icons/gr';
+import { GrReactjs, GrNode } from 'react-icons/gr';
 
 import { SectionTitle } from '../SectionTitle';
 import { ConhecimentoItem } from './ConhecimentoItem';
@@ -15,12 +15,29 @@ export function Conhecimentos() {
       <SectionTitle title="Conhecimentos" />
 
       <section>
-        <ConhecimentoItem title="HTML" icon={<AiFillHtml5 />} />
-        <ConhecimentoItem title="CSS" icon={<FaCss3Alt />} />
-        <ConhecimentoItem title="JAVASCRIPT" icon={<SiJavascript />} />
-        <ConhecimentoItem title="TYPESCRIPT" icon={<SiTypescript />} />
-        <ConhecimentoItem title="REACT.JS" icon={<GrReactjs />} />
-        <ConhecimentoItem title="NEXT.JS" icon={<IoLogoVercel />} />
+        <ConhecimentoItem title="HTML" icon={<AiFillHtml5 color="#DD6B20" />} />
+        <ConhecimentoItem title="CSS" icon={<FaCss3Alt color="#2B6CB0" />} />
+        <ConhecimentoItem
+          title="JAVASCRIPT"
+          icon={<SiJavascript color="#D69E2E" />}
+        />
+        <ConhecimentoItem
+          title="TYPESCRIPT"
+          icon={<SiTypescript color="#0047ab" />}
+        />
+        <ConhecimentoItem
+          title="REACT.JS"
+          icon={<GrReactjs color="#00B5D8" />}
+        />
+        <ConhecimentoItem
+          title="REACT.NATIVE"
+          icon={<GrReactjs color="#0047ab" />}
+        />
+        <ConhecimentoItem title="NODE.JS" icon={<GrNode color="#38A169" />} />
+        <ConhecimentoItem
+          title="NEXT.JS"
+          icon={<IoLogoVercel color="#1a1a1a" />}
+        />
       </section>
     </Container>
   );

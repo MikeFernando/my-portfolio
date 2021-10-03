@@ -20,7 +20,7 @@ export const Container = styled.section`
   }
 
   > button {
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.textHighlight};
     border: none;
     border-radius: 0.5rem;
     padding: 0.8rem 3rem;
@@ -28,7 +28,7 @@ export const Container = styled.section`
     transition: 0.5s;
 
     &:hover {
-      background: ${({ theme }) => darken(0.1, theme.primary)};
+      background: ${({ theme }) => darken(0.1, theme.textHighlight)};
     }
 
     a {
@@ -87,13 +87,13 @@ export const ProjectContainer = styled.div<ProjectProps>`
       transition: 0.5s;
 
       h1 {
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.secondary};
         font-size: 2.5rem;
         text-shadow: -4px 5px 22px #11172b;
       }
 
       h2 {
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.primary};
         font-size: 2rem;
         font-weight: 300;
         text-shadow: -4px 5px 22px #11172b;
@@ -125,7 +125,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       }
 
       > div.overlay {
-        opacity: 0.4;
+        opacity: 0.2;
       }
     }
 

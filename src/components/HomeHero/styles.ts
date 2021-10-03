@@ -6,7 +6,7 @@ export const Container = styled.div`
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin: 4rem 0;
 
   > img {
     width: 40rem;
@@ -17,6 +17,7 @@ export const Container = styled.div`
     flex: 4;
   }
 
+  // ============================== RESPONSIVE
   @media (max-width: 1450px) {
     > img {
       width: 30rem;
@@ -33,7 +34,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 700px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
 
     > div {
       width: 100%;
@@ -120,7 +121,7 @@ export const CodeInfo = styled.pre`
   }
 
   &:hover {
-    filter: brightness(1.3);
+    filter: brightness(2);
   }
 
   // ============================== RESPONSIVE

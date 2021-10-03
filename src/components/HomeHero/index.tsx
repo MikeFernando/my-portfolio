@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeInfo } from './styles';
 
-import picture from '../../assets/pessoa.webp';
+import picture from '../../assets/avatar-eai.jpg';
 
 export function HomeHero() {
   return (
@@ -9,7 +9,6 @@ export function HomeHero() {
       <img src={picture} alt="Minha foto" />
       <div>
         <TextContainer>
-          <h1>Olá</h1>
           <h2>Me chamo Mike</h2>
         </TextContainer>
 
@@ -21,7 +20,10 @@ export function HomeHero() {
               Nome: <span className="blue">Mike,</span>
             </div>
             <div>
-              Sobrenome: <span className="blue">Fernando</span>
+              Sobrenome: <span className="blue">Fernando,</span>
+            </div>
+            <div>
+              Idade: <span className="blue">26 anos</span>
             </div>
             {'\u007D'}
           </CodeInfo>
