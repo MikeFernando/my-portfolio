@@ -4,7 +4,7 @@ import { SectionTitle } from '../SectionTitle';
 import { ProjectItem } from './ProjectItem';
 import { Container } from './styles';
 
-export function Projects() {
+export function ProjectsHome() {
   return (
     <Container>
       <SectionTitle title="Últimos projetos" />

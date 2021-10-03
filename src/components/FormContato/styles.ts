@@ -19,7 +19,7 @@ export const FormContainer = styled.form`
     color: #fff;
     font-size: 1.2rem;
     border-radius: 0.5rem;
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.backgroundLight};
     width: fit-content;
 
     transition: 0.5s;
@@ -50,8 +50,8 @@ export const FormContainer = styled.form`
 export const Input = styled.input`
   height: 3rem;
   width: 100%;
-  background: ${({ theme }) => theme.inputBackground};
-  color: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.gradient};
+  color: #fff;
   border: 1px solid ${({ theme }) => theme.border};
   border-radius: 0.5rem;
   padding: 1.7rem 1.5rem;
@@ -77,8 +77,8 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   height: 10rem;
   width: 100%;
-  background: ${({ theme }) => theme.inputBackground};
-  color: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.gradient};
+  color: #fff;
   border: 1px solid ${({ theme }) => theme.border};
   border-radius: 0.5rem;
   padding: 1.7rem 1.5rem;

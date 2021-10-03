@@ -6,19 +6,29 @@ import { Container } from './styles';
 export function Experiences() {
   return (
     <Container>
-      <SectionTitle title="2 anos" description="de experiência" />
+      <SectionTitle title="3 anos" description="de experiência" />
 
       <section>
         <ExperienceItem
+          year={2019}
+          title="Desbravando a Web"
+          description="Iniciei com HTML e CSS criando sites estáticos, logo em seguida dei meus 
+          primeiros passos em lógica de programação, aprendendo algoritimos em JavaScript ES6, manipulação
+          da DOM, etc...
+          "
+        />
+        <ExperienceItem
           year={2020}
-          title="Primeiros passos na Web"
-          description="Primeiro contato com Linguagem de Marcação de Hiper Textos (HTML) e estilos em cascatas (CSS) onde realizei
-          a construção de sites estáticos, dashboards, e catálogos..."
+          title="Tecnologias avançadas"
+          description="Com os conhecimentos obtidos estava apto a conhecer frameworks e linguagens que as empresas
+          usam em seus projetos, e assim iniciei meus estudos em ReactJS , React-Native, Node.JS."
         />
         <ExperienceItem
           year={2021}
-          title="Dev Front-end"
-          description="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica."
+          title="Finalmente Desenvolvedor"
+          description="Capaz de compreender o fluxo completo que acontece por debaixo dos panos entre servidor e interfaces.
+          Atualmente mais focado em Front-End. 
+          "
         />
       </section>
     </Container>

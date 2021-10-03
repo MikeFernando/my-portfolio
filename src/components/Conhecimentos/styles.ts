@@ -6,9 +6,12 @@ export const Container = styled.section`
   > section {
     margin-top: 8rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 8rem;
+
+    border-bottom: 3px solid ${({ theme }) => theme.primary};
 
     // ============================== RESPONSIVE
     @media (max-width: 1320px) {
@@ -35,7 +38,7 @@ export const ConhecimentoContainer = styled.div`
   justify-content: center;
 
   p {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.secondary};
     font-weight: 300;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -44,15 +47,15 @@ export const ConhecimentoContainer = styled.div`
   svg {
     height: 6.5rem;
     width: 6.5rem;
-    color: ${({ theme }) => theme.secondary};
     transition: 0.3s;
+    margin-bottom: 7rem;
   }
 
   // ============================== PESEUDO ELEMENTS
   &:hover {
     svg {
       color: ${({ theme }) => theme.primary};
-      transform: scale(0.95);
+      transform: scale(0.77);
     }
   }
 
