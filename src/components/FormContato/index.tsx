@@ -10,9 +10,9 @@ export function FormContato() {
         title="Entrar em contato"
         description={
           <>
-            Preencha o formulário abaixo que
+            Preencha o formulário abaixo
             <br />
-            irei retornar em breve
+            que irei retornar em breve
           </>
         }
       />

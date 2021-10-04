@@ -31,6 +31,7 @@ export const ItemContainer = styled.div`
     padding-top: 2.5rem;
     height: 20rem;
     position: relative;
+    box-shadow: 5px 10px 2px 2px rgba(0, 0, 0, 0.5);
 
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@ export const ItemContainer = styled.div`
     }
 
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.primary};
       font-size: 1.5rem;
       font-weight: 300;
       margin-bottom: 1rem;
@@ -82,7 +83,7 @@ export const ItemContainer = styled.div`
 
   // ============================== PSEUDO ELEMENTS
   &:hover > div {
-    filter: brightness(2);
+    filter: brightness(1.5);
     transform: translateY(-20px);
   }
 

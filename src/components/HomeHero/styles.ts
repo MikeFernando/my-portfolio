@@ -88,6 +88,7 @@ export const CodeInfo = styled.pre`
   padding: 2rem;
 
   background: ${({ theme }) => theme.gradient};
+  box-shadow: 5px 10px 2px 2px rgba(0, 0, 0, 0.5);
   color: #fff;
 
   font-family: 'JetBrains mono', monospace;
