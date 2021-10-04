@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeInfo } from './styles';
 
-import picture from '../../assets/avatar-eai.jpg';
+import picture from '../../assets/avatar-terno.png';
 
 export function HomeHero() {
   return (
@@ -9,6 +9,7 @@ export function HomeHero() {
       <img src={picture} alt="Minha foto" />
       <div>
         <TextContainer>
+          <h1>Olá</h1>
           <h2>Me chamo Mike</h2>
         </TextContainer>
 
@@ -34,7 +35,10 @@ export function HomeHero() {
               Cargo: <span className="blue">Dev Front-end,</span>
             </div>
             <div>
-              Empresa: <span className="blue">MEI</span>
+              Empresa: <span className="blue">MEI,</span>
+            </div>
+            <div>
+              Status: <span className="blue">Disponível</span>
             </div>
             {'\u007D'}
           </CodeInfo>

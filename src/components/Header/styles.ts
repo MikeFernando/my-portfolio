@@ -24,7 +24,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
     text-transform: uppercase;
     color: ${props =>
-      props.isActive ? props.theme.primary : props.theme.textHighlight};
+      props.isActive ? props.theme.primary : props.theme.text};
     transition: 0.5s;
 
     &:hover {

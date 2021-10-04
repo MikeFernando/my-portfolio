@@ -9,17 +9,17 @@ export const Container = styled.section`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 8rem;
+    gap: 12rem;
 
     border-bottom: 3px solid ${({ theme }) => theme.primary};
 
     // ============================== RESPONSIVE
-    @media (max-width: 1320px) {
-      gap: 3rem;
+    @media (max-width: 1400px) {
+      gap: 8rem;
       flex-wrap: wrap;
     }
     @media (max-width: 1000px) {
-      gap: 5rem;
+      gap: 8rem;
     }
 
     @media (max-width: 700px) {
@@ -45,8 +45,8 @@ export const ConhecimentoContainer = styled.div`
   }
 
   svg {
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 8rem;
+    width: 8rem;
     transition: 0.3s;
     margin-bottom: 7rem;
   }
@@ -55,7 +55,7 @@ export const ConhecimentoContainer = styled.div`
   &:hover {
     svg {
       color: ${({ theme }) => theme.primary};
-      transform: scale(0.77);
+      transform: scale(0.7);
     }
   }
 
