@@ -1,85 +1,59 @@
+import Prismic from '@prismicio/client';
+import { GetStaticProps } from 'next';
+
+import getPrismicClient from '../../services/prismic';
+
 import { Header } from '../../components/Header';
 import { ProjetoItem } from '../../components/ProjetoItem';
+
+import { IProjects } from '../../@types/IProjects';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: IProjects[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <ProjectsContainer>
       <Header />
+
       <main className="container">
-        <ProjetoItem
-          title="Projeto 01"
-          type="World trip"
-          imgUrl="https://imgur.com/vgh3YfF.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 02"
-          type="Dashgo"
-          imgUrl="https://user-images.githubusercontent.com/71772559/113496123-d0aa6800-94cc-11eb-90dd-800b72502003.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 03"
-          type="Ignews"
-          imgUrl="https://imgur.com/kAgYYjp.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 04"
-          type="GoBarber"
-          imgUrl="https://imgur.com/e8XJWup.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 05"
-          type="Dev Finance"
-          imgUrl="https://imgur.com/RvbKOAY.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 06"
-          type="Spacetraveling"
-          imgUrl="https://imgur.com/ENxojoz.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 07"
-          type="dt money"
-          imgUrl="https://imgur.com/byeRsmH.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 08"
-          type="Origin six"
-          imgUrl="https://imgur.com/jtbblCT.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 09"
-          type="Github explorer"
-          imgUrl="https://imgur.com/RIEIPjJ.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 10"
-          type="Spider man"
-          imgUrl="https://imgur.com/RcLHuik.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 11"
-          type="Move.it"
-          imgUrl="https://imgur.com/7yzH16m.png"
-          slug="teste"
-        />
-        <ProjetoItem
-          title="Projeto 12"
-          type="Happy Web"
-          imgUrl="https://imgur.com/VA0Lv3W.png"
-          slug="teste"
-        />
+        {projects.map(project => (
+          <ProjetoItem
+            key={project.slug}
+            title={project.title}
+            type={project.type}
+            imgUrl={project.thumbnail}
+            slug={project.slug}
+          />
+        ))}
       </main>
     </ProjectsContainer>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+
+  const projectResponse = await prismic.query(
+    [Prismic.predicates.at('document.type', 'projeto')],
+    { orderings: '[document.last_publication_date desc]' }
+  );
+
+  const projects = projectResponse.results.map(project => ({
+    slug: project.uid,
+    title: project.data.title,
+    type: project.data.type,
+    description: project.data.description,
+    link: project.data.link.url,
+    thumbnail: project.data.thumbnail.url
+  }));
+
+  return {
+    props: {
+      projects
+    },
+    revalidate: 60 * 60 * 24 // 24 hours
+  };
+};

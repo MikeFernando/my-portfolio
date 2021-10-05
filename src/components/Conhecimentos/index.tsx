@@ -1,5 +1,5 @@
-import { SiJavascript, SiTypescript } from 'react-icons/si';
-import { IoLogoVercel } from 'react-icons/io5';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { SiJavascript, SiTypescript, SiNextDotJs } from 'react-icons/si';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt } from 'react-icons/fa';
 import { GrReactjs, GrNode } from 'react-icons/gr';
@@ -36,7 +36,7 @@ export function Conhecimentos() {
         <ConhecimentoItem title="NODE.JS" icon={<GrNode color="#38A169" />} />
         <ConhecimentoItem
           title="NEXT.JS"
-          icon={<IoLogoVercel color="#1a1a1a" />}
+          icon={<SiNextDotJs color="#1a1a1a" />}
         />
       </section>
     </Container>
