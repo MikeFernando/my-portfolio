@@ -8,7 +8,7 @@ interface Props {
 
 export function ExperienceItem({ year, title, description }: Props) {
   return (
-    <ItemContainer>
+    <ItemContainer data-aos="fade-up">
       <div>
         <h1>{year}</h1>
         <h2>{title}</h2>

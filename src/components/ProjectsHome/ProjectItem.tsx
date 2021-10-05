@@ -12,7 +12,7 @@ interface Props {
 
 export function ProjectItem({ img, title, slug, type }: Props) {
   return (
-    <ProjectContainer imgUrl={img}>
+    <ProjectContainer imgUrl={img} data-aos="fade-up">
       <section>
         <div className="overlay" />
         <div className="text">

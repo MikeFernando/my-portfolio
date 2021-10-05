@@ -10,32 +10,27 @@ export const Container = styled.div`
   h1 {
     color: ${({ theme }) => theme.primary};
     font-size: 4.5rem;
-    margin: 3rem 0;
+    margin-top: 3rem;
   }
-
   h2 {
     color: ${({ theme }) => theme.secondary};
-    font-size: 3.5rem;
     font-weight: 300;
+    font-size: 3.5rem;
   }
 
-  // ============================== RESPOSIVIDADE
-
+  // ============================== RESPONSIVE
   @media (max-width: 1000px) {
     h1 {
       font-size: 2.5rem;
     }
-
     h2 {
       font-size: 1.8rem;
     }
   }
-
   @media (max-width: 500px) {
     h1 {
       font-size: 1.8rem;
     }
-
     h2 {
       font-size: 1.2rem;
     }

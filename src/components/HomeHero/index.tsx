@@ -5,8 +5,8 @@ import picture from '../../assets/avatar-terno.png';
 
 export function HomeHero() {
   return (
-    <Container>
-      <img src={picture} alt="Minha foto" />
+    <Container data-aos="fade-up">
+      <img data-aos="fade-up" src={picture} alt="Minha foto" />
       <div>
         <TextContainer>
           <h1>Olá</h1>
@@ -14,7 +14,7 @@ export function HomeHero() {
         </TextContainer>
 
         <InfosContainer>
-          <CodeInfo>
+          <CodeInfo data-aos="flip-left">
             <span className="comment">//Minha apresentação</span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
@@ -29,7 +29,7 @@ export function HomeHero() {
             {'\u007D'}
           </CodeInfo>
 
-          <CodeInfo>
+          <CodeInfo data-aos="flip-right">
             <span className="purple">Infos</span> {'\u007B'}
             <div>
               Cargo: <span className="blue">Dev Front-end,</span>

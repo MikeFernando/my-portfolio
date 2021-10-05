@@ -9,7 +9,7 @@ interface Props {
 
 export function ConhecimentoItem({ title, icon }: Props) {
   return (
-    <ConhecimentoContainer>
+    <ConhecimentoContainer data-aos="fade-up">
       <p>{title}</p>
       {icon}
     </ConhecimentoContainer>
