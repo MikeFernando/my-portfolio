@@ -1,24 +1,36 @@
+// ROUTES IMPORTS
 import Prismic from '@prismicio/client';
+import { useEffect } from 'react';
 import { GetStaticProps } from 'next';
+import AOS from 'aos';
 
+// SERVICES
 import getPrismicClient from '../../services/prismic';
-
+// COMPONENTS
 import { Header } from '../../components/Header';
 import { ProjetoItem } from '../../components/ProjetoItem';
 
+// TYPES
 import { IProjects } from '../../@types/IProjects';
+
+// CSS
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
+import 'aos/dist/aos.css';
 
 interface ProjectsProps {
   projects: IProjects[];
 }
 
 export default function Projects({ projects }: ProjectsProps) {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <ProjectsContainer>
       <Header />
 
-      <main className="container">
+      <main className="container" data-aos="zoom-in-down">
         {projects.map(project => (
           <ProjetoItem
             key={project.slug}
