@@ -3,6 +3,7 @@ import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import AOS from 'aos';
+import Head from 'next/head';
 
 // SERVICES
 import getPrismicClient from '../../services/prismic';
@@ -28,6 +29,9 @@ export default function Projects({ projects }: ProjectsProps) {
 
   return (
     <ProjectsContainer>
+      <Head>
+        <title>Projetos</title>
+      </Head>
       <Header />
 
       <main className="container" data-aos="zoom-in-down">
