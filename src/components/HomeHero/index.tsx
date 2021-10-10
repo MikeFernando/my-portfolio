@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeInfo } from './styles';
 
-import picture from '../../assets/avatar-terno.png';
+import picture from '../../assets/avatar-terno.webp';
 
 export function HomeHero() {
   return (
