@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react';
 import toast from 'react-hot-toast';
 
-import { sendContactMail } from '../../services/sendMail';
+import sendContactMail from '../../services/sendContactMail';
 import theme from '../../styles/theme';
 
 import { FormContainer, Input, TextArea } from './styles';
@@ -10,6 +10,8 @@ export function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmitForm(event: FormEvent) {
     event.preventDefault();
@@ -25,8 +27,9 @@ export function Form() {
     }
 
     try {
-      await sendContactMail(name, email, message);
+      setLoading(true);
 
+      await sendContactMail(name, email, message);
       setName('');
       setEmail('');
       setMessage('');
@@ -38,12 +41,14 @@ export function Form() {
         }
       });
     } catch (error) {
-      toast('Ocorreu um erro ao enviar sua mensagem, tente novamente!', {
+      toast('Ocorreu um erro ao tentar enviar sua mensagem, tente novamente!', {
         style: {
           background: theme.error,
           color: '#fff'
         }
       });
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -67,7 +72,9 @@ export function Form() {
         onChange={({ target }) => setMessage(target.value)}
       />
 
-      <button type="submit">ENVIAR</button>
+      <button disabled={loading} type="submit">
+        ENVIAR
+      </button>
     </FormContainer>
   );
 }

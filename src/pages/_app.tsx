@@ -1,8 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { Toaster } from 'react-hot-toast';
 
-export const NODE_TLS_REJECT_UNAUTHORIZED='0'
-
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 

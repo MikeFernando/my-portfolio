@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export async function sendContactMail(
+export default async function sendContactMail(
   name: string,
   senderMail: string,
   content: string
