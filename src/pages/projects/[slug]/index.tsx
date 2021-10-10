@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client';
 import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import getPrismicClient from '../../../services/prismic';
 
@@ -25,6 +26,10 @@ export default function Projeto({ project }: ProjetoProps) {
 
   return (
     <ProjetoContainer>
+      <Head>
+        <title>{project.slug}</title>
+      </Head>
+
       <Header />
 
       <BannerContainer
