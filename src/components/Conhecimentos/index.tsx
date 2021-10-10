@@ -34,10 +34,7 @@ export function Conhecimentos() {
           icon={<GrReactjs color="#0047ab" />}
         />
         <ConhecimentoItem title="NODE.JS" icon={<GrNode color="#38A169" />} />
-        <ConhecimentoItem
-          title="NEXT.JS"
-          icon={<SiNextDotJs color="#1a1a1a" />}
-        />
+        <ConhecimentoItem title="NEXT.JS" icon={<SiNextDotJs color="#ccc" />} />
       </section>
     </Container>
   );

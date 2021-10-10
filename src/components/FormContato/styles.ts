@@ -19,17 +19,19 @@ export const FormContainer = styled.form`
     color: #fff;
     font-size: 1.2rem;
     border-radius: 0.5rem;
-    background: ${({ theme }) => theme.backgroundLight};
+    background: ${({ theme }) => darken(0.1, theme.primary)};
     width: fit-content;
 
     transition: 0.5s;
 
     &:disabled {
-      opacity: 0.5;
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: ${({ theme }) => darken(0.3, theme.primary)};
     }
 
     &:not(:disabled):hover {
-      background: ${({ theme }) => darken(0.2, theme.primary)};
+      background: ${({ theme }) => darken(0.3, theme.primary)};
     }
   }
 
