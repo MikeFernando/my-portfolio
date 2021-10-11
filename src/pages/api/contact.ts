@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { google } from 'googleapis';
 
@@ -34,7 +33,7 @@ const mailer = ({ name, senderMail, text }) => {
     from,
     to: `${email}`,
     subject: `Nova mensage de contato - ${name}`,
-    text: `E-mail: ${senderMail} \n ${text}`,
+    text,
     replyTo: from
   };
 
@@ -45,11 +44,11 @@ const mailer = ({ name, senderMail, text }) => {
   });
 };
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async (req, res) => {
   const { name, senderMail, content } = req.body;
 
   if (name === '' || senderMail === '' || content === '') {
-    res.status(403);
+    res.status(403).send();
     return;
   }
 
