@@ -22,7 +22,7 @@ export function ProjectsHome({ projects }: ProjectsHomeProps) {
             img={project.thumbnail}
             title={project.title}
             type={project.type}
-            slug={project.link}
+            slug={project.slug}
           />
         ))}
       </section>

@@ -6,11 +6,11 @@ import { ProjectContainer } from './styles';
 interface Props {
   img: string;
   title: string;
-  slug: string;
   type: string;
+  slug: string;
 }
 
-export function ProjectItem({ img, title, slug, type }: Props) {
+export function ProjectItem({ img, title, type, slug }: Props) {
   return (
     <ProjectContainer imgUrl={img} data-aos="fade-up">
       <section>
